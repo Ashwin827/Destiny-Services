@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Himalayan Cleaning Services</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <div class="container">
+        <h1>Himalayan Cleaning Services</h1>
+        <nav>
+            <a href="#services">Services</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </div>
+</header>
+
+<section class="hero">
+    <h2>Professional Cleaning Services You Can Trust</h2>
+    <p>Reliable, Detailed and Affordable Cleaning for Homes & Businesses</p>
+    <button onclick="scrollToContact()">Get Free Quote</button>
+</section>
+
+<section id="services" class="services container">
+    <h2>Our Services</h2>
+
+    <div class="service-card">
+        <h3>General Cleaning</h3>
+        <p>Regular cleaning including dusting, vacuuming, mopping, kitchen and bathroom cleaning. Perfect for weekly or fortnightly maintenance.</p>
+        <button class="send-quote-btn" data-service="General Cleaning">Send Quote</button>
+    </div>
+
+    <div class="service-card">
+        <h3>Residential Cleaning</h3>
+        <p>Complete home cleaning for houses and apartments with attention to detail and customer satisfaction.</p>
+        <button class="send-quote-btn" data-service="Residential Cleaning">Send Quote</button>
+    </div>
+
+    <div class="service-card">
+        <h3>End of Lease Cleaning</h3>
+        <p>Detailed bond cleaning following real estate standards to help secure your full bond refund.</p>
+        <button class="send-quote-btn" data-service="End of Lease Cleaning">Send Quote</button>
+    </div>
+
+    <div class="service-card">
+        <h3>Deep Cleaning</h3>
+        <p>Intensive cleaning targeting built-up dirt and hard-to-reach areas. Ideal for spring cleaning.</p>
+        <button class="send-quote-btn" data-service="Deep Cleaning">Send Quote</button>
+    </div>
+
+    <div class="service-card">
+        <h3>Commercial Cleaning</h3>
+        <p>Professional cleaning for offices, retail stores and commercial spaces to maintain a hygienic workplace.</p>
+        <button class="send-quote-btn" data-service="Commercial Cleaning">Send Quote</button>
+    </div>
+
+    <div class="service-card">
+        <h3>Restaurant Cleaning</h3>
+        <p>Specialized cleaning for restaurants and commercial kitchens with focus on hygiene and health compliance.</p>
+        <button class="send-quote-btn" data-service="Restaurant Cleaning">Send Quote</button>
+    </div>
+
+    <div class="service-card">
+        <h3>Factory Cleaning</h3>
+        <p>Industrial cleaning solutions for warehouses and factories, including large areas and machinery surroundings.</p>
+        <button class="send-quote-btn" data-service="Factory Cleaning">Send Quote</button>
+    </div>
+
+    <div class="service-card">
+        <h3>Indoor Painting</h3>
+        <p>Professional indoor painting services for homes and businesses, including walls, ceilings, and trim.</p>
+        <button class="send-quote-btn" data-service="Indoor Painting">Send Quote</button>
+    </div>
+</section>
+
+<section id="about" class="about">
+    <div class="container">
+        <h2>Why Choose Us?</h2>
+        <p>Himalayan Cleaning Services is committed to delivering high-quality, reliable and professional cleaning solutions. We focus on attention to detail, punctuality and customer satisfaction.</p>
+    </div>
+</section>
+
+<section id="contact" class="contact container">
+
+    <h2>Contact</h2>
+    <p><strong>Name:</strong> Ashwin Majhi</p>
+    <p><strong>Phone:</strong> 0406 228 933</p>
+<footer>
+    <p>© 2026 Himalayan Cleaning Services. All rights reserved.</p>
+</footer>
+
+<!-- Quote Modal -->
+<div id="quoteModal" class="modal" style="display:none;">
+    <div class="modal-content">
+        <span class="close" id="closeModal">&times;</span>
+        <h2>Request a Quote</h2>
+        <form id="quoteForm">
+            <input type="text" id="quoteName" name="name" placeholder="Full Name" required>
+            <input type="email" id="quoteEmail" name="email" placeholder="Email" required>
+            <input type="tel" id="quotePhone" name="phone" placeholder="Phone Number" required>
+            <input type="text" id="quoteService" name="service" placeholder="Service" readonly>
+            <textarea id="quoteMessage" name="message" placeholder="Additional Details" required></textarea>
+            <input type="file" id="quotePhoto" name="photo" accept="image/*">
+            <button type="submit">Send Quote</button>
+        </form>
+        <p id="quoteStatus" class="success-message"></p>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
