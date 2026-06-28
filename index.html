@@ -574,88 +574,6 @@
   }
   #toast.show { transform: translateX(-50%) translateY(0); }
 
-  /* ── PAYMENT SECTION ── */
-  .payment-card {
-    background: #fff;
-    border: 1px solid var(--border);
-    border-radius: 20px;
-    overflow: hidden;
-    box-shadow: 0 8px 30px rgba(10,27,42,0.07);
-  }
-  .payment-header {
-    background: linear-gradient(135deg, var(--midnight) 0%, #0A3D62 100%);
-    padding: 24px 28px;
-    display: flex;
-    align-items: center;
-    gap: 16px;
-  }
-  .payment-icon { font-size: 2rem; }
-  .payment-bank-name {
-    font-family: 'Playfair Display', serif;
-    font-size: 1.1rem;
-    font-weight: 700;
-    color: #fff;
-  }
-  .payment-bank-sub { font-size: 0.78rem; color: rgba(255,255,255,0.5); margin-top: 2px; }
-  .payment-details { padding: 6px 28px 4px; }
-  .payment-row {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 14px 0;
-    border-bottom: 1px solid var(--border);
-    flex-wrap: wrap;
-    gap: 8px;
-  }
-  .payment-row:last-child { border-bottom: none; }
-  .payment-label {
-    font-size: 0.78rem;
-    font-weight: 700;
-    letter-spacing: 0.06em;
-    text-transform: uppercase;
-    color: var(--slate);
-    min-width: 130px;
-  }
-  .payment-value {
-    font-size: 1.05rem;
-    font-weight: 700;
-    color: var(--midnight);
-    letter-spacing: 0.05em;
-    font-family: 'Playfair Display', serif;
-  }
-  .copy-btn {
-    background: var(--sky-light);
-    border: 1px solid var(--border);
-    color: var(--sky);
-    padding: 4px 12px;
-    border-radius: 6px;
-    font-size: 0.75rem;
-    font-weight: 700;
-    cursor: pointer;
-    font-family: 'Inter', sans-serif;
-    transition: all 0.2s;
-  }
-  .copy-btn:hover { background: var(--sky); color: #fff; border-color: var(--sky); }
-  .copy-confirm {
-    font-size: 0.75rem;
-    font-weight: 600;
-    color: var(--accent-dark);
-    opacity: 0;
-    transition: opacity 0.3s;
-  }
-  .copy-confirm.show { opacity: 1; }
-  .payment-note {
-    background: var(--sky-light);
-    margin: 0;
-    padding: 16px 28px;
-    font-size: 0.82rem;
-    color: var(--slate);
-    line-height: 1.6;
-    border-top: 1px solid var(--border);
-  }
-  .payment-note strong { color: var(--midnight); }
-  .payment-note em { color: var(--sky); font-style: normal; }
-
   /* ── PRICE CALCULATOR ── */
   .calc-card {
     background: rgba(0,201,167,0.07);
@@ -1328,48 +1246,7 @@
   </div>
 </section>
 
-<!-- PAYMENT SECTION -->
-<section id="payment" style="background:var(--mist); padding:70px 5%;">
-  <div class="section-eyebrow">How to Pay</div>
-  <h2 class="section-title">Bank Transfer Payment</h2>
-  <p class="section-sub" style="margin-bottom:36px;">Once your quote is confirmed, payment is made directly to our bank account below. Payment is due before or on the day of the clean.</p>
-  <div style="max-width:540px;">
-    <div class="payment-card">
-      <div class="payment-header">
-        <span class="payment-icon">🏦</span>
-        <div>
-          <div class="payment-bank-name">Commonwealth Bank</div>
-          <div class="payment-bank-sub">Direct Bank Transfer (EFT)</div>
-        </div>
-      </div>
-      <div class="payment-details">
-        <div class="payment-row">
-          <span class="payment-label">Account Name</span>
-          <span class="payment-value">Destiny Services</span>
-        </div>
-        <div class="payment-row">
-          <span class="payment-label">BSB</span>
-          <div style="display:flex;align-items:center;gap:10px;">
-            <span class="payment-value" id="bsb-val">067 873</span>
-            <button class="copy-btn" onclick="copyVal('067873','bsb-copied')">Copy</button>
-            <span class="copy-confirm" id="bsb-copied">Copied!</span>
-          </div>
-        </div>
-        <div class="payment-row">
-          <span class="payment-label">Account Number</span>
-          <div style="display:flex;align-items:center;gap:10px;">
-            <span class="payment-value" id="acc-val">24 570 503</span>
-            <button class="copy-btn" onclick="copyVal('24570503','acc-copied')">Copy</button>
-            <span class="copy-confirm" id="acc-copied">Copied!</span>
-          </div>
-        </div>
-      </div>
-      <div class="payment-note">
-        💡 Please use your <strong>name + service</strong> as the payment reference (e.g. <em>Sarah Roberts – Deep Clean</em>) so we can match your payment easily.
-      </div>
-    </div>
-  </div>
-</section>
+
 
 <!-- CONTACT BAR -->
 <div class="contact-bar">
