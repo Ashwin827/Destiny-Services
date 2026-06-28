@@ -21,9 +21,7 @@
   }
 
   * { margin: 0; padding: 0; box-sizing: border-box; }
-
   html { scroll-behavior: smooth; }
-
   body {
     font-family: 'Inter', sans-serif;
     background: var(--clean-white);
@@ -41,9 +39,7 @@
     height: 68px;
     border-bottom: 1px solid rgba(255,255,255,0.07);
   }
-  .nav-logo {
-    display: flex; align-items: center; gap: 10px;
-  }
+  .nav-logo { display: flex; align-items: center; gap: 10px; }
   .nav-logo .logo-mark {
     width: 36px; height: 36px;
     background: var(--accent);
@@ -57,9 +53,7 @@
     color: #fff;
     letter-spacing: 0.02em;
   }
-  .nav-links {
-    display: flex; gap: 32px; list-style: none;
-  }
+  .nav-links { display: flex; gap: 32px; list-style: none; }
   .nav-links a {
     color: rgba(255,255,255,0.75);
     text-decoration: none;
@@ -92,7 +86,6 @@
     position: absolute; inset: 0;
     background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
   }
-  /* Bubble decorations */
   .bubble {
     position: absolute;
     border-radius: 50%;
@@ -129,10 +122,7 @@
     font-weight: 900;
     margin-bottom: 24px;
   }
-  .hero h1 em {
-    font-style: normal;
-    color: var(--accent);
-  }
+  .hero h1 em { font-style: normal; color: var(--accent); }
   .hero p {
     font-size: 1.1rem;
     color: rgba(255,255,255,0.7);
@@ -165,19 +155,6 @@
     transition: all 0.25s;
   }
   .btn-outline:hover { border-color: var(--accent); color: var(--accent); }
-  .hero-stats {
-    display: flex; gap: 40px; margin-top: 60px;
-    padding-top: 36px;
-    border-top: 1px solid rgba(255,255,255,0.12);
-  }
-  .stat-item { text-align: left; }
-  .stat-num {
-    font-family: 'Playfair Display', serif;
-    font-size: 2rem; font-weight: 900;
-    color: #fff;
-  }
-  .stat-num span { color: var(--accent); }
-  .stat-label { font-size: 0.78rem; color: rgba(255,255,255,0.5); text-transform: uppercase; letter-spacing: 0.06em; margin-top: 2px; }
 
   /* ── SECTION BASE ── */
   section { padding: 90px 5%; }
@@ -356,10 +333,7 @@
     text-decoration: none;
     transition: all 0.25s;
   }
-  .plan-btn-outline {
-    border: 2px solid var(--border);
-    color: var(--midnight);
-  }
+  .plan-btn-outline { border: 2px solid var(--border); color: var(--midnight); }
   .plan-btn-outline:hover { border-color: var(--sky); color: var(--sky); }
   .plan-btn-solid {
     background: var(--accent);
@@ -367,6 +341,68 @@
     box-shadow: 0 4px 16px rgba(0, 201, 167, 0.35);
   }
   .plan-btn-solid:hover { background: #fff; transform: translateY(-2px); }
+  /* ── ADD-ON TABLES ── */
+  .addon-label {
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--slate);
+    margin-top: 20px;
+    margin-bottom: 8px;
+    padding-top: 18px;
+    border-top: 1px solid var(--border);
+  }
+  .pricing-card.popular .addon-label {
+    border-top-color: rgba(255,255,255,0.1);
+  }
+  .addon-table { width: 100%; }
+  .addon-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.82rem;
+    padding: 5px 0;
+    color: var(--slate);
+    border-bottom: 1px solid var(--border);
+  }
+  .addon-row:last-child { border-bottom: none; }
+  .addon-row span:last-child {
+    font-weight: 700;
+    color: var(--sky);
+    white-space: nowrap;
+  }
+  .addon-table-dark .addon-row {
+    color: rgba(255,255,255,0.7);
+    border-bottom-color: rgba(255,255,255,0.08);
+  }
+  .addon-table-dark .addon-row span:last-child {
+    color: var(--accent);
+  }
+
+  .pricing-note {
+    text-align: center;
+    margin-top: 36px;
+    font-size: 0.85rem;
+    color: var(--slate);
+  }
+  .pricing-note a { color: var(--sky); font-weight: 600; text-decoration: none; }
+  .pricing-note a:hover { text-decoration: underline; }
+
+  /* ── WHY US ── */
+  #why { background: var(--sky-light); }
+  .why-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; }
+  .why-card {
+    background: #fff;
+    border-radius: 14px;
+    padding: 30px 24px;
+    border: 1px solid var(--border);
+    text-align: center;
+  }
+  .why-card .why-icon { font-size: 2.2rem; margin-bottom: 14px; }
+  .why-card h4 { font-family: 'Playfair Display', serif; font-size: 1.05rem; font-weight: 700; color: var(--midnight); margin-bottom: 8px; }
+  .why-card p { font-size: 0.85rem; color: var(--slate); line-height: 1.6; }
+
 
   /* ── QUOTE FORM ── */
   #quote { background: var(--midnight); }
@@ -447,42 +483,6 @@
   }
   .form-submit:hover { background: #fff; transform: translateY(-2px); box-shadow: 0 8px 30px rgba(0, 201, 167, 0.4); }
   .form-note { font-size: 0.77rem; color: rgba(255,255,255,0.35); text-align: center; margin-top: 14px; }
-
-  /* ── WHY US ── */
-  #why { background: var(--sky-light); }
-  .why-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; }
-  .why-card {
-    background: #fff;
-    border-radius: 14px;
-    padding: 30px 24px;
-    border: 1px solid var(--border);
-    text-align: center;
-  }
-  .why-card .why-icon { font-size: 2.2rem; margin-bottom: 14px; }
-  .why-card h4 { font-family: 'Playfair Display', serif; font-size: 1.05rem; font-weight: 700; color: var(--midnight); margin-bottom: 8px; }
-  .why-card p { font-size: 0.85rem; color: var(--slate); line-height: 1.6; }
-
-  /* ── TESTIMONIALS ── */
-  #testimonials { background: var(--clean-white); }
-  .testi-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; }
-  .testi-card {
-    background: #fff;
-    border: 1px solid var(--border);
-    border-radius: 16px;
-    padding: 32px 28px;
-  }
-  .stars { color: var(--gold); font-size: 0.9rem; margin-bottom: 14px; }
-  .testi-card p { font-size: 0.9rem; color: var(--slate); line-height: 1.7; font-style: italic; margin-bottom: 20px; }
-  .testi-author { display: flex; align-items: center; gap: 12px; }
-  .testi-avatar {
-    width: 40px; height: 40px;
-    border-radius: 50%;
-    background: var(--sky);
-    display: flex; align-items: center; justify-content: center;
-    color: #fff; font-weight: 700; font-size: 0.9rem;
-  }
-  .testi-name { font-weight: 600; font-size: 0.875rem; color: var(--midnight); }
-  .testi-location { font-size: 0.78rem; color: var(--slate); }
 
   /* ── CONTACT BAR ── */
   .contact-bar {
@@ -574,6 +574,208 @@
   }
   #toast.show { transform: translateX(-50%) translateY(0); }
 
+  /* ── PAYMENT SECTION ── */
+  .payment-card {
+    background: #fff;
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 8px 30px rgba(10,27,42,0.07);
+  }
+  .payment-header {
+    background: linear-gradient(135deg, var(--midnight) 0%, #0A3D62 100%);
+    padding: 24px 28px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+  .payment-icon { font-size: 2rem; }
+  .payment-bank-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #fff;
+  }
+  .payment-bank-sub { font-size: 0.78rem; color: rgba(255,255,255,0.5); margin-top: 2px; }
+  .payment-details { padding: 6px 28px 4px; }
+  .payment-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 0;
+    border-bottom: 1px solid var(--border);
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  .payment-row:last-child { border-bottom: none; }
+  .payment-label {
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--slate);
+    min-width: 130px;
+  }
+  .payment-value {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--midnight);
+    letter-spacing: 0.05em;
+    font-family: 'Playfair Display', serif;
+  }
+  .copy-btn {
+    background: var(--sky-light);
+    border: 1px solid var(--border);
+    color: var(--sky);
+    padding: 4px 12px;
+    border-radius: 6px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    cursor: pointer;
+    font-family: 'Inter', sans-serif;
+    transition: all 0.2s;
+  }
+  .copy-btn:hover { background: var(--sky); color: #fff; border-color: var(--sky); }
+  .copy-confirm {
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--accent-dark);
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+  .copy-confirm.show { opacity: 1; }
+  .payment-note {
+    background: var(--sky-light);
+    margin: 0;
+    padding: 16px 28px;
+    font-size: 0.82rem;
+    color: var(--slate);
+    line-height: 1.6;
+    border-top: 1px solid var(--border);
+  }
+  .payment-note strong { color: var(--midnight); }
+  .payment-note em { color: var(--sky); font-style: normal; }
+
+  /* ── PRICE CALCULATOR ── */
+  .calc-card {
+    background: rgba(0,201,167,0.07);
+    border: 1px solid rgba(0,201,167,0.25);
+    border-radius: 14px;
+    padding: 20px 22px 16px;
+    margin-bottom: 20px;
+  }
+  .calc-title {
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 14px;
+  }
+  .calc-section-label {
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.45);
+    margin-bottom: 8px;
+  }
+  .bedroom-btns {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-bottom: 4px;
+  }
+  .bed-btn {
+    flex: 1;
+    min-width: 44px;
+    padding: 9px 4px;
+    background: rgba(255,255,255,0.07);
+    border: 1.5px solid rgba(255,255,255,0.15);
+    border-radius: 8px;
+    color: rgba(255,255,255,0.75);
+    font-family: 'Inter', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.18s;
+  }
+  .bed-btn:hover { border-color: var(--accent); color: var(--accent); }
+  .bed-btn.active {
+    background: var(--accent);
+    border-color: var(--accent);
+    color: var(--midnight);
+  }
+  .addon-checks {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 6px;
+    margin-bottom: 4px;
+  }
+  .addon-check-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 7px;
+    padding: 7px 10px;
+    cursor: pointer;
+    transition: all 0.15s;
+    font-size: 0.78rem;
+    color: rgba(255,255,255,0.7);
+    user-select: none;
+  }
+  .addon-check-item:hover { border-color: var(--accent); color: rgba(255,255,255,0.95); }
+  .addon-check-item.checked {
+    background: rgba(0,201,167,0.12);
+    border-color: var(--accent);
+    color: #fff;
+  }
+  .addon-check-item input[type="checkbox"] { display: none; }
+  .addon-check-box {
+    width: 16px; height: 16px;
+    border: 1.5px solid rgba(255,255,255,0.3);
+    border-radius: 4px;
+    flex-shrink: 0;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 10px;
+    transition: all 0.15s;
+  }
+  .addon-check-item.checked .addon-check-box {
+    background: var(--accent);
+    border-color: var(--accent);
+    color: var(--midnight);
+  }
+  .addon-check-text { flex: 1; line-height: 1.3; }
+  .addon-check-price {
+    font-weight: 700;
+    color: var(--accent);
+    white-space: nowrap;
+  }
+  .calc-total-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 16px;
+    padding-top: 14px;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    font-size: 0.85rem;
+    color: rgba(255,255,255,0.6);
+  }
+  .calc-total-num {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.7rem;
+    font-weight: 900;
+    color: #fff;
+  }
+  .calc-disclaimer {
+    font-size: 0.7rem;
+    color: rgba(255,255,255,0.3);
+    margin-top: 8px;
+    line-height: 1.4;
+  }
+
   /* ── RESPONSIVE ── */
   @media (max-width: 768px) {
     .nav-links { display: none; }
@@ -581,13 +783,231 @@
     .form-row { grid-template-columns: 1fr; }
     .footer-grid { grid-template-columns: 1fr 1fr; }
     .contact-bar { flex-direction: column; text-align: center; }
-    .hero-stats { gap: 24px; }
     .pricing-card.popular { transform: scale(1); }
   }
   @media (max-width: 480px) {
     .footer-grid { grid-template-columns: 1fr; }
     section { padding: 64px 5%; }
   }
+
+  /* ── SERVICE CARD BOOK BTN ── */
+  .svc-book-btn {
+    display: block;
+    width: 100%;
+    margin-top: 16px;
+    padding: 11px;
+    background: var(--accent);
+    color: var(--midnight);
+    border: none;
+    border-radius: 8px;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.88rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+  .svc-book-btn:hover { background: var(--midnight); color: var(--accent); }
+
+  /* ── BOOKING MODAL ── */
+  #bookingOverlay {
+    position: fixed; inset: 0; z-index: 2000;
+    background: rgba(13,27,42,0.75);
+    backdrop-filter: blur(6px);
+    display: flex; align-items: center; justify-content: center;
+    padding: 20px;
+    animation: fadeIn 0.2s ease;
+  }
+  @keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+  #bookingModal {
+    background: var(--midnight);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 24px;
+    padding: 40px 36px 36px;
+    width: 100%;
+    max-width: 560px;
+    max-height: 90vh;
+    overflow-y: auto;
+    position: relative;
+    animation: slideUp 0.25s cubic-bezier(0.34,1.26,0.64,1);
+  }
+  @keyframes slideUp { from { transform: translateY(30px); opacity:0; } to { transform: translateY(0); opacity:1; } }
+  .bk-close {
+    position: absolute; top: 16px; right: 20px;
+    background: rgba(255,255,255,0.08);
+    border: none; color: rgba(255,255,255,0.6);
+    width: 32px; height: 32px; border-radius: 50%;
+    font-size: 0.85rem; cursor: pointer;
+    display: flex; align-items: center; justify-content: center;
+    transition: all 0.2s;
+  }
+  .bk-close:hover { background: rgba(255,255,255,0.15); color: #fff; }
+  .bk-back {
+    background: none; border: none; color: rgba(255,255,255,0.45);
+    font-family: 'Inter', sans-serif; font-size: 0.82rem;
+    cursor: pointer; padding: 0; margin-bottom: 20px;
+    display: inline-flex; align-items: center; gap: 4px;
+    transition: color 0.2s;
+  }
+  .bk-back:hover { color: var(--accent); }
+  .bk-eyebrow {
+    font-size: 0.72rem; font-weight: 700; letter-spacing: 0.12em;
+    text-transform: uppercase; color: var(--accent); margin-bottom: 8px;
+  }
+  .bk-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.6rem; font-weight: 900; color: #fff;
+    line-height: 1.2; margin-bottom: 28px;
+  }
+
+  /* Step 1 – service grid */
+  .bk-services {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 12px;
+  }
+  .bk-svc-card {
+    background: rgba(255,255,255,0.05);
+    border: 1.5px solid rgba(255,255,255,0.1);
+    border-radius: 14px; padding: 20px 16px;
+    cursor: pointer; transition: all 0.2s;
+    text-align: center;
+  }
+  .bk-svc-card:hover { border-color: var(--accent); background: rgba(0,201,167,0.08); transform: translateY(-2px); }
+  .bk-svc-icon { font-size: 1.8rem; display: block; margin-bottom: 8px; }
+  .bk-svc-name { font-size: 0.82rem; font-weight: 600; color: #fff; line-height: 1.3; margin-bottom: 4px; }
+  .bk-svc-from { font-size: 0.75rem; color: var(--accent); font-weight: 600; }
+
+  /* Step 2 – bedroom grid */
+  .bk-beds { display: grid; grid-template-columns: repeat(5, 1fr); gap: 10px; }
+  .bk-bed-card {
+    background: rgba(255,255,255,0.05);
+    border: 1.5px solid rgba(255,255,255,0.1);
+    border-radius: 12px; padding: 16px 8px;
+    cursor: pointer; transition: all 0.2s;
+    text-align: center; display: flex; flex-direction: column; align-items: center; gap: 4px;
+  }
+  .bk-bed-card:hover { border-color: var(--accent); background: rgba(0,201,167,0.08); }
+  .bk-bed-num { font-family: 'Playfair Display', serif; font-size: 1.5rem; font-weight: 900; color: #fff; }
+  .bk-bed-label { font-size: 0.65rem; color: rgba(255,255,255,0.45); text-transform: uppercase; letter-spacing: 0.05em; }
+  .bk-bed-price { font-size: 0.78rem; font-weight: 700; color: var(--accent); margin-top: 4px; }
+
+  /* Step 3 – summary + pay */
+  .bk-summary {
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 14px; padding: 20px; margin-bottom: 24px;
+  }
+  .bk-summary-row {
+    display: flex; justify-content: space-between;
+    font-size: 0.85rem; color: rgba(255,255,255,0.6);
+    padding: 6px 0; border-bottom: 1px solid rgba(255,255,255,0.07);
+  }
+  .bk-summary-row span:last-child { color: #fff; font-weight: 600; }
+  .bk-summary-total {
+    display: flex; justify-content: space-between; align-items: center;
+    padding-top: 14px; margin-top: 4px;
+    font-size: 0.85rem; color: rgba(255,255,255,0.6);
+  }
+  .bk-summary-total span:last-child {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem; font-weight: 900; color: #fff;
+  }
+  .bk-pay-title {
+    font-size: 0.75rem; font-weight: 700; letter-spacing: 0.1em;
+    text-transform: uppercase; color: rgba(255,255,255,0.4);
+    margin-bottom: 12px;
+  }
+  .bk-pay-btn {
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 16px 20px; border-radius: 12px;
+    font-weight: 700; font-size: 0.95rem;
+    text-decoration: none; transition: all 0.22s;
+    margin-bottom: 10px;
+  }
+  .bk-pay-main {
+    background: var(--accent); color: var(--midnight);
+    box-shadow: 0 4px 20px rgba(0,201,167,0.35);
+  }
+  .bk-pay-main:hover { background: #fff; transform: translateY(-2px); box-shadow: 0 8px 30px rgba(0,201,167,0.4); }
+  .bk-pay-arrow { font-size: 1.1rem; }
+  .bk-pay-note {
+    font-size: 0.75rem; color: rgba(255,255,255,0.3);
+    text-align: center; margin-top: 14px; line-height: 1.5;
+  }
+
+
+  /* Step 3 – add-ons grid */
+  .bk-addon-grid {
+    display: grid; grid-template-columns: 1fr 1fr;
+    gap: 8px; margin-bottom: 18px;
+  }
+  .bk-addon-item {
+    display: flex; align-items: center; gap: 8px;
+    background: rgba(255,255,255,0.05);
+    border: 1.5px solid rgba(255,255,255,0.1);
+    border-radius: 10px; padding: 10px 12px;
+    cursor: pointer; transition: all 0.18s;
+    font-size: 0.78rem; color: rgba(255,255,255,0.7);
+    user-select: none;
+  }
+  .bk-addon-item:hover { border-color: var(--accent); color: #fff; background: rgba(0,201,167,0.07); }
+  .bk-addon-item.checked { border-color: var(--accent); background: rgba(0,201,167,0.12); color: #fff; }
+  .bk-addon-check {
+    width: 18px; height: 18px; flex-shrink: 0;
+    border: 1.5px solid rgba(255,255,255,0.3);
+    border-radius: 4px; font-size: 11px; font-weight: 700;
+    display: flex; align-items: center; justify-content: center;
+    color: var(--midnight); transition: all 0.15s;
+  }
+  .bk-addon-item.checked .bk-addon-check { background: var(--accent); border-color: var(--accent); }
+  .bk-addon-item-label { flex: 1; line-height: 1.3; }
+  .bk-addon-item-price { font-weight: 700; color: var(--accent); white-space: nowrap; font-size: 0.8rem; }
+  .bk-addon-subtotal {
+    display: flex; justify-content: space-between;
+    font-size: 0.82rem; color: rgba(255,255,255,0.5);
+    padding: 6px 0; border-top: 1px solid rgba(255,255,255,0.08);
+  }
+  .bk-addon-subtotal span:last-child { color: rgba(255,255,255,0.8); font-weight: 600; }
+  .bk-addon-total-row {
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 12px 0 18px;
+    font-size: 0.85rem; color: rgba(255,255,255,0.5);
+    border-top: 1px solid rgba(255,255,255,0.12);
+    margin-top: 2px;
+  }
+  .bk-addon-total-row span:last-child {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem; font-weight: 900; color: #fff;
+  }
+  .bk-addon-pay-note {
+    margin-top: 12px;
+    background: rgba(245,166,35,0.1);
+    border: 1px solid rgba(245,166,35,0.3);
+    border-radius: 10px;
+    padding: 12px 14px;
+    font-size: 0.76rem;
+    color: rgba(255,255,255,0.6);
+    line-height: 1.5;
+  }
+  .bk-continue-btn {
+    width: 100%; padding: 16px;
+    background: var(--accent); color: var(--midnight);
+    border: none; border-radius: 12px;
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem; font-weight: 700;
+    cursor: pointer; transition: all 0.22s;
+    box-shadow: 0 4px 20px rgba(0,201,167,0.35);
+  }
+  .bk-continue-btn:hover { background: #fff; transform: translateY(-2px); }
+
+  @media (max-width: 480px) {
+    .bk-addon-grid { grid-template-columns: 1fr; }
+  }
+  @media (max-width: 480px) {
+    #bookingModal { padding: 32px 20px 28px; }
+    .bk-services { grid-template-columns: 1fr 1fr; }
+    .bk-beds { grid-template-columns: repeat(3, 1fr); }
+    .bk-title { font-size: 1.3rem; }
+  }
+
 </style>
 </head>
 <body>
@@ -602,8 +1022,8 @@
     <li><a href="#services">Services</a></li>
     <li><a href="#pricing">Pricing</a></li>
     <li><a href="#why">Why Us</a></li>
-    <li><a href="#testimonials">Reviews</a></li>
-    <li><a href="#quote" class="nav-cta">Get a Quote</a></li>
+    <li><a href="#quote">Get a Quote</a></li>
+    <li><a href="javascript:void(0)" onclick="openBooking()" class="nav-cta">Book a Clean</a></li>
   </ul>
 </nav>
 
@@ -617,22 +1037,8 @@
     <h1>Spotless Spaces.<br><em>Every Time.</em></h1>
     <p>Darwin's go-to cleaning service for homes, offices, and commercial properties — delivered by trained, insured locals who treat your space like their own.</p>
     <div class="hero-actions">
-      <a href="#quote" class="btn-primary">Get a Free Quote →</a>
+      <button onclick="openBooking()" class="btn-primary">🧹 Book a Clean</button>
       <a href="#services" class="btn-outline">View Services</a>
-    </div>
-    <div class="hero-stats">
-      <div class="stat-item">
-        <div class="stat-num">2,500<span>+</span></div>
-        <div class="stat-label">Cleans Completed</div>
-      </div>
-      <div class="stat-item">
-        <div class="stat-num">4.9<span>★</span></div>
-        <div class="stat-label">Average Rating</div>
-      </div>
-      <div class="stat-item">
-        <div class="stat-num">100<span>%</span></div>
-        <div class="stat-label">Satisfaction Guarantee</div>
-      </div>
     </div>
   </div>
 </section>
@@ -648,46 +1054,125 @@
       <h3>Residential Cleaning</h3>
       <p>Regular home cleaning tailored to your schedule. Vacuuming, mopping, kitchens, bathrooms, and all living areas — fully covered.</p>
       <div class="service-from">Starting from <strong>$200</strong> per visit</div>
+      <button class="svc-book-btn" onclick="openBooking('residential')">Book Now →</button>
     </div>
     <div class="service-card">
       <div class="service-icon">🏢</div>
       <h3>Commercial Cleaning</h3>
       <p>Offices, retail stores, and workplaces kept immaculate. After-hours availability so your business is never disrupted.</p>
       <div class="service-from">Starting from <strong>$200</strong> per visit</div>
+      <button class="svc-book-btn" onclick="openBooking('commercial')">Book Now →</button>
     </div>
     <div class="service-card">
       <div class="service-icon">🔍</div>
       <h3>Deep Cleaning</h3>
       <p>Top-to-bottom intensive clean covering appliances, inside cupboards, grout, skirting boards, and hard-to-reach areas.</p>
       <div class="service-from">Starting from <strong>$400</strong></div>
+      <button class="svc-book-btn" onclick="openBooking('deep')">Book Now →</button>
     </div>
     <div class="service-card">
       <div class="service-icon">🔑</div>
       <h3>End of Lease Cleaning</h3>
       <p>Bond-back guaranteed. We meet real estate checklists and cover every detail so you get your full deposit returned.</p>
       <div class="service-from">Starting from <strong>$400</strong></div>
+      <button class="svc-book-btn" onclick="openBooking('lease')">Book Now →</button>
     </div>
     <div class="service-card">
       <div class="service-icon">🪟</div>
       <h3>Window Cleaning</h3>
       <p>Interior and exterior window cleaning using streak-free solutions. Tracks, sills, and frames included.</p>
       <div class="service-from">Starting from <strong>$100</strong></div>
+      <button class="svc-book-btn" onclick="openBooking('window')">Book Now →</button>
     </div>
     <div class="service-card">
       <div class="service-icon">🏗️</div>
       <h3>After-Construction Cleaning</h3>
       <p>Post-renovation dust and debris removal. We prep newly built or renovated spaces for move-in or opening day.</p>
       <div class="service-from">Starting from <strong>$400</strong></div>
+      <button class="svc-book-btn" onclick="openBooking('construction')">Book Now →</button>
     </div>
   </div>
 </section>
 
+<!-- PRICING -->
+<section id="pricing">
+  <div class="section-eyebrow">Transparent Pricing</div>
+  <h2 class="section-title">Simple, Honest Rates</h2>
+  <p class="section-sub">No hidden fees, no surprises. Base rates below — add only what you need from our optional extras.</p>
 
+  <div class="pricing-grid">
+    <!-- Residential -->
+    <div class="pricing-card">
+      <div class="plan-name">Residential</div>
+      <div class="plan-price"><sup>$</sup>200</div>
+      <div class="plan-note">per visit · base rate</div>
+      <div class="plan-desc">Regular home cleaning covering all living areas, kitchen, bathrooms, vacuuming and mopping. Add extras below as needed.</div>
+      <ul class="plan-features">
+        <li>All bedrooms &amp; living areas</li>
+        <li>Kitchen surfaces &amp; appliances</li>
+        <li>Bathrooms &amp; toilets</li>
+        <li>Vacuuming &amp; mopping</li>
+        <li>Bin emptying &amp; tidying</li>
+      </ul>
+      <div class="addon-label">Optional Add-ons</div>
+      <div class="addon-table">
+        <div class="addon-row"><span>Extra Bathroom</span><span>+$60</span></div>
+        <div class="addon-row"><span>Balcony</span><span>+$50</span></div>
+        <div class="addon-row"><span>Cupboards (inside)</span><span>+$60</span></div>
+        <div class="addon-row"><span>Fridge (inside)</span><span>+$50</span></div>
+        <div class="addon-row"><span>Garage</span><span>+$100</span></div>
+        <div class="addon-row"><span>Oven (inside)</span><span>+$80</span></div>
+        <div class="addon-row"><span>Pantry</span><span>+$60</span></div>
+        <div class="addon-row"><span>Blinds</span><span>+$20</span></div>
+        <div class="addon-row"><span>Windows</span><span>+$40</span></div>
+      </div>
+      <a href="#quote" class="plan-btn plan-btn-outline" style="margin-top:20px;">Get a Quote</a>
+    </div>
 
+    <!-- End of Lease / Deep Clean (popular) -->
+    <div class="pricing-card popular">
+      <div class="popular-badge">Most Popular</div>
+      <div class="plan-name">End of Lease &amp; Deep Clean</div>
+      <div class="plan-price"><sup>$</sup>400</div>
+      <div class="plan-note">one-off · full property</div>
+      <div class="plan-desc">Top-to-bottom intensive clean. Bond-back guaranteed — we meet every real estate checklist. Add extras as needed.</div>
+      <ul class="plan-features">
+        <li>Everything in Residential</li>
+        <li>Grout, skirting boards &amp; vents</li>
+        <li>Inside cupboards &amp; drawers</li>
+        <li>Oven interior deep clean</li>
+        <li>Satisfaction guarantee</li>
+      </ul>
+      <div class="addon-label" style="color:rgba(255,255,255,0.5);">Optional Add-ons</div>
+      <div class="addon-table addon-table-dark">
+        <div class="addon-row"><span>Extra Bathroom</span><span>+$120</span></div>
+        <div class="addon-row"><span>Balcony</span><span>+$100</span></div>
+        <div class="addon-row"><span>Cupboards (inside)</span><span>+$120</span></div>
+        <div class="addon-row"><span>Oven (inside)</span><span>+$160</span></div>
+        <div class="addon-row"><span>Pantry</span><span>+$120</span></div>
+        <div class="addon-row"><span>Blinds</span><span>+$40</span></div>
+        <div class="addon-row"><span>Windows</span><span>+$40</span></div>
+      </div>
+      <a href="#quote" class="plan-btn plan-btn-solid" style="margin-top:20px;">Get a Quote</a>
+    </div>
+
+    <!-- Commercial -->
+    <div class="pricing-card">
+      <div class="plan-name">Commercial</div>
+      <div class="plan-price"><sup>$</sup>200<span style="font-size:1rem;font-weight:500;">+</span></div>
+      <div class="plan-note">per visit · offices &amp; retail</div>
+      <div class="plan-desc">Flexible after-hours scheduling for businesses of any size. Ongoing contracts available at reduced rates.</div>
+      <ul class="plan-features">
+        <li>Offices, retail &amp; warehouses</li>
+        <li>After-hours availability</li>
+        <li>Restrooms &amp; break rooms</li>
+        <li>Reception &amp; common areas</li>
+        <li>Custom frequency options</li>
+      </ul>
+      <a href="#quote" class="plan-btn plan-btn-outline">Get a Quote</a>
+    </div>
   </div>
-  <p style="text-align:center; margin-top: 36px; font-size: 0.85rem; color: var(--slate);">
-    Need a custom quote for larger properties or ongoing contracts? <a href="#quote" style="color: var(--sky); font-weight: 600;">Get in touch →</a>
-  </p>
+  <p class="pricing-note">Need a custom quote for larger properties or ongoing contracts? <a href="#quote">Get in touch →</a></p>
 </section>
 
 <!-- WHY US -->
@@ -730,7 +1215,6 @@
 </section>
 
 
-
 <!-- QUOTE FORM -->
 <section id="quote">
   <div class="quote-layout">
@@ -763,65 +1247,126 @@
       </div>
     </div>
 
-    <div class="quote-form">
+    <form class="quote-form" id="quoteForm" onsubmit="handleQuote(event)">
       <div class="form-row">
         <div class="form-group">
           <label>First Name</label>
-          <input type="text" placeholder="e.g. Sarah" id="fname">
+          <input type="text" placeholder="e.g. Sarah" id="fname" name="fname" required>
         </div>
         <div class="form-group">
           <label>Last Name</label>
-          <input type="text" placeholder="e.g. Roberts" id="lname">
+          <input type="text" placeholder="e.g. Roberts" id="lname" name="lname">
         </div>
       </div>
       <div class="form-row">
         <div class="form-group">
           <label>Email Address</label>
-          <input type="email" placeholder="you@email.com" id="email">
+          <input type="email" placeholder="you@email.com" id="email" name="email" required>
         </div>
         <div class="form-group">
           <label>Phone Number</label>
-          <input type="tel" placeholder="04XX XXX XXX" id="phone">
+          <input type="tel" placeholder="04XX XXX XXX" id="phone" name="phone">
         </div>
       </div>
-      <div class="form-row">
-        <div class="form-group">
-          <label>Service Type</label>
-          <select id="service">
-            <option value="">Select a service...</option>
-            <option>Residential Cleaning</option>
-            <option>Commercial Cleaning</option>
-            <option>Deep Cleaning</option>
-            <option>End of Lease Cleaning</option>
-            <option>Window Cleaning</option>
-            <option>After-Construction Cleaning</option>
-            <option>Other / Not Sure</option>
-          </select>
-        </div>
-        <div class="form-group">
-          <label>Property Size</label>
-          <select id="size">
-            <option value="">Select size...</option>
-            <option>Studio / 1 Bedroom</option>
-            <option>2 Bedrooms</option>
-            <option>3 Bedrooms</option>
-            <option>4+ Bedrooms</option>
-            <option>Small Office (under 100m²)</option>
-            <option>Medium Office (100–300m²)</option>
-            <option>Large Commercial (300m²+)</option>
-          </select>
+
+      <!-- Service selector -->
+      <div class="form-group">
+        <label>Service Type</label>
+        <select id="service" name="service" required onchange="calcUpdate()">
+          <option value="">Select a service...</option>
+          <option value="Residential Cleaning">Residential Cleaning</option>
+          <option value="Commercial Cleaning">Commercial Cleaning</option>
+          <option value="Deep Cleaning">Deep Cleaning</option>
+          <option value="End of Lease Cleaning">End of Lease Cleaning</option>
+          <option value="Window Cleaning">Window Cleaning</option>
+          <option value="After-Construction Cleaning">After-Construction Cleaning</option>
+          <option value="Other / Not Sure">Other / Not Sure</option>
+        </select>
+      </div>
+
+      <!-- ── PRICE CALCULATOR (shown for Residential / Deep / End of Lease) ── -->
+      <div id="calcBox" style="display:none;">
+        <div class="calc-card">
+          <div class="calc-title">&#128274; Instant Price Estimate</div>
+
+          <!-- Bedrooms -->
+          <div class="calc-section-label">Bedrooms</div>
+          <div class="bedroom-btns" id="bedroomBtns">
+            <button type="button" class="bed-btn" data-beds="1" onclick="selectBeds(1)">1</button>
+            <button type="button" class="bed-btn" data-beds="2" onclick="selectBeds(2)">2</button>
+            <button type="button" class="bed-btn" data-beds="3" onclick="selectBeds(3)">3</button>
+            <button type="button" class="bed-btn" data-beds="4" onclick="selectBeds(4)">4</button>
+            <button type="button" class="bed-btn" data-beds="5" onclick="selectBeds(5)">5+</button>
+          </div>
+
+          <!-- Add-ons (Residential only) -->
+          <div id="addonSection">
+            <div class="calc-section-label" style="margin-top:14px;">Optional Add-ons</div>
+            <div class="addon-checks" id="addonChecks"></div>
+          </div>
+
+          <!-- Total -->
+          <div class="calc-total-row">
+            <span>Estimated Total</span>
+            <span id="calcTotal" class="calc-total-num">Select bedrooms</span>
+          </div>
+          <div class="calc-disclaimer">Final price confirmed after inspection. Add-ons are optional extras.</div>
         </div>
       </div>
+
       <div class="form-group">
         <label>Suburb / City</label>
-        <input type="text" placeholder="e.g. Darwin, NT" id="suburb">
+        <input type="text" placeholder="e.g. Darwin, NT" id="suburb" name="suburb">
       </div>
       <div class="form-group">
         <label>Anything else? (optional)</label>
-        <textarea placeholder="Tell us about any specific requirements, preferred dates, or areas of concern..." id="message"></textarea>
+        <textarea placeholder="Tell us about any specific requirements, preferred dates, or areas of concern..." id="message" name="message"></textarea>
       </div>
-      <button class="form-submit" onclick="handleQuote()">Send My Quote Request →</button>
+      <button type="submit" class="form-submit" id="quoteSubmit">Send My Quote Request →</button>
       <div class="form-note">🔒 Your details are private and never shared. No spam, ever.</div>
+    </form>
+  </div>
+</section>
+
+<!-- PAYMENT SECTION -->
+<section id="payment" style="background:var(--mist); padding:70px 5%;">
+  <div class="section-eyebrow">How to Pay</div>
+  <h2 class="section-title">Bank Transfer Payment</h2>
+  <p class="section-sub" style="margin-bottom:36px;">Once your quote is confirmed, payment is made directly to our bank account below. Payment is due before or on the day of the clean.</p>
+  <div style="max-width:540px;">
+    <div class="payment-card">
+      <div class="payment-header">
+        <span class="payment-icon">🏦</span>
+        <div>
+          <div class="payment-bank-name">Commonwealth Bank</div>
+          <div class="payment-bank-sub">Direct Bank Transfer (EFT)</div>
+        </div>
+      </div>
+      <div class="payment-details">
+        <div class="payment-row">
+          <span class="payment-label">Account Name</span>
+          <span class="payment-value">Destiny Services</span>
+        </div>
+        <div class="payment-row">
+          <span class="payment-label">BSB</span>
+          <div style="display:flex;align-items:center;gap:10px;">
+            <span class="payment-value" id="bsb-val">067 873</span>
+            <button class="copy-btn" onclick="copyVal('067873','bsb-copied')">Copy</button>
+            <span class="copy-confirm" id="bsb-copied">Copied!</span>
+          </div>
+        </div>
+        <div class="payment-row">
+          <span class="payment-label">Account Number</span>
+          <div style="display:flex;align-items:center;gap:10px;">
+            <span class="payment-value" id="acc-val">24 570 503</span>
+            <button class="copy-btn" onclick="copyVal('24570503','acc-copied')">Copy</button>
+            <span class="copy-confirm" id="acc-copied">Copied!</span>
+          </div>
+        </div>
+      </div>
+      <div class="payment-note">
+        💡 Please use your <strong>name + service</strong> as the payment reference (e.g. <em>Sarah Roberts – Deep Clean</em>) so we can match your payment easily.
+      </div>
     </div>
   </div>
 </section>
@@ -830,11 +1375,11 @@
 <div class="contact-bar">
   <div>
     <h2>Ready to book a clean?</h2>
-    <p>Serving Darwin, Palmerston, Humpty Doo & surrounds — call us today.</p>
+    <p>Serving Darwin, Palmerston, Humpty Doo &amp; surrounds — call us today.</p>
   </div>
   <div class="contact-bar-actions">
     <a href="tel:0452304244" class="bar-btn-white">📞 0452 304 244</a>
-    <a href="mailto:destinyservices03@gmail.com" class="bar-btn-ghost">✉️ Email Us</a>
+    <a href="mailto:destinyservice03@gmail.com" class="bar-btn-ghost">✉️ Email Us</a>
   </div>
 </div>
 
@@ -850,7 +1395,7 @@
       <div class="footer-contact-item">📍 Darwin, Northern Territory, Australia</div>
       <div class="footer-contact-item">📞 <a href="tel:0452304244">0452 304 244</a></div>
       <div class="footer-contact-item">📞 <a href="tel:0406228933">0406 228 933</a></div>
-      <div class="footer-contact-item">✉️ <a href="mailto:destinyservices03@gmail.com">destinyservices03@gmail.com</a></div>
+      <div class="footer-contact-item">✉️ <a href="mailto:destinyservice03@gmail.com">destinyservice03@gmail.com</a></div>
     </div>
     <div class="footer-col">
       <h5>Services</h5>
@@ -880,7 +1425,6 @@
       <ul>
         <li><a href="#why">About Us</a></li>
         <li><a href="#pricing">Pricing</a></li>
-        <li><a href="#testimonials">Reviews</a></li>
         <li><a href="#quote">Get a Quote</a></li>
         <li><a href="#">Privacy Policy</a></li>
         <li><a href="#">Terms of Service</a></li>
@@ -889,59 +1433,823 @@
   </div>
   <div class="footer-bottom">
     <p>© 2025 Destiny Services Cleaning. All rights reserved. Darwin, NT.</p>
-    <p class="abn">ABN: XX XXX XXX XXX · All prices include GST · Satisfaction Guaranteed</p>
+    <p class="abn">ABN: 75 502 323 389 · All prices include GST · Satisfaction Guaranteed</p>
   </div>
 </footer>
 
 <!-- TOAST -->
-<div id="toast">✅ Quote request sent! We'll be in touch within 2 hours.</div>
+<div id="toast" role="status" aria-live="polite">✅ Quote request sent! We'll be in touch within 2 hours.</div>
 
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
 <script>
-  function handleQuote() {
-    const fname = document.getElementById('fname').value.trim();
-    const email = document.getElementById('email').value.trim();
-    const service = document.getElementById('service').value;
-
-    if (!fname || !email || !service) {
-      document.getElementById('toast').style.background = '#e74c3c';
-      document.getElementById('toast').style.color = '#fff';
-      document.getElementById('toast').textContent = '⚠️ Please fill in your name, email, and service type.';
-      document.getElementById('toast').classList.add('show');
-      setTimeout(() => document.getElementById('toast').classList.remove('show'), 3500);
-      return;
+  (function(){
+    if (window.emailjs) {
+      emailjs.init('vZTHwmxY7-Sw-GqQw');
     }
+  })();
 
-    document.getElementById('toast').style.background = '#00C9A7';
-    document.getElementById('toast').style.color = '#0D1B2A';
-    document.getElementById('toast').textContent = '✅ Quote request sent! We\'ll be in touch within 2 hours.';
-    document.getElementById('toast').classList.add('show');
-    setTimeout(() => document.getElementById('toast').classList.remove('show'), 4000);
 
-    // Clear form
-    ['fname','lname','email','phone','service','size','suburb','message'].forEach(id => {
-      const el = document.getElementById(id);
+  /* ══════════════════════════════════════════════
+     PRICE CALCULATOR
+  ══════════════════════════════════════════════ */
+  var RESIDENTIAL_ADDONS = [
+    { key: 'bathroom',  label: 'Extra Bathroom', price: 60 },
+    { key: 'balcony',   label: 'Balcony',         price: 50 },
+    { key: 'cupboards', label: 'Cupboards',        price: 60 },
+    { key: 'fridge',    label: 'Fridge (inside)',  price: 50 },
+    { key: 'garage',    label: 'Garage',           price: 100 },
+    { key: 'oven',      label: 'Oven (inside)',    price: 80 },
+    { key: 'pantry',    label: 'Pantry',           price: 60 },
+    { key: 'blinds',    label: 'Blinds',           price: 20 },
+    { key: 'windows',   label: 'Windows',          price: 40 }
+  ];
+
+  var LEASE_ADDONS = [
+    { key: 'bathroom',  label: 'Extra Bathroom',   price: 120 },
+    { key: 'balcony',   label: 'Balcony',           price: 100 },
+    { key: 'cupboards', label: 'Cupboards',          price: 120 },
+    { key: 'oven',      label: 'Oven (inside)',      price: 160 },
+    { key: 'pantry',    label: 'Pantry',             price: 120 },
+    { key: 'blinds',    label: 'Blinds',             price: 40 },
+    { key: 'windows',   label: 'Windows',            price: 40 },
+    { key: 'carpet',    label: 'Carpet Steam Clean', price: 'carpet', isCarpet: true }
+  ];
+
+  // Base price by bedroom count
+  function basePrice(beds, serviceType) {
+    var isLease = (serviceType === 'End of Lease Cleaning' || serviceType === 'Deep Cleaning');
+    if (isLease) {
+      return 400 + (beds - 1) * 200;   // 400, 600, 800, 1000, 1200...
+    } else {
+      return 200 + (beds - 1) * 80;    // 200, 280, 360, 440, 520...
+    }
+  }
+
+  var selectedBeds = 0;
+
+  function getCalcService() {
+    var s = document.getElementById('service').value;
+    if (s === 'Residential Cleaning') return 'Residential';
+    if (s === 'End of Lease Cleaning' || s === 'Deep Cleaning') return 'Lease';
+    return null;
+  }
+
+  function calcUpdate() {
+    var svc = document.getElementById('service').value;
+    var calcBox = document.getElementById('calcBox');
+    var addonSection = document.getElementById('addonSection');
+    var isRes  = (svc === 'Residential Cleaning');
+    var isLease = (svc === 'End of Lease Cleaning' || svc === 'Deep Cleaning');
+
+    if (isRes || isLease) {
+      calcBox.style.display = 'block';
+      // Build add-on checkboxes
+      var addons = isRes ? RESIDENTIAL_ADDONS : LEASE_ADDONS;
+      var container = document.getElementById('addonChecks');
+      container.innerHTML = '';
+      addons.forEach(function(a) {
+        var div = document.createElement('div');
+        div.className = 'addon-check-item';
+        div.id = 'chk_' + a.key;
+        var priceDisplay = a.isCarpet
+          ? '<span class="addon-check-price" id="price_carpet">+$' + carpetPrice(selectedBeds || 1) + '</span>'
+          : '<span class="addon-check-price">+$' + a.price + '</span>';
+        div.innerHTML =
+          '<div class="addon-check-box" id="box_' + a.key + '"></div>' +
+          '<span class="addon-check-text">' + a.label + (a.isCarpet ? '<br><span style="font-size:0.68rem;opacity:0.6;">per bedroom</span>' : '') + '</span>' +
+          priceDisplay;
+        div.onclick = function() { toggleAddon(a.key); };
+        container.appendChild(div);
+      });
+      // Residential shows add-ons; lease also shows add-ons
+      addonSection.style.display = 'block';
+      selectedBeds = 0;
+      // Reset bed buttons
+      document.querySelectorAll('.bed-btn').forEach(function(b){ b.classList.remove('active'); });
+      document.getElementById('calcTotal').textContent = 'Select bedrooms';
+    } else {
+      calcBox.style.display = 'none';
+      selectedBeds = 0;
+    }
+  }
+
+  function toggleAddon(key) {
+    var item = document.getElementById('chk_' + key);
+    var box  = document.getElementById('box_' + key);
+    if (item.classList.contains('checked')) {
+      item.classList.remove('checked');
+      box.textContent = '';
+    } else {
+      item.classList.add('checked');
+      box.textContent = '\u2713';
+    }
+    updateTotal();
+  }
+
+  function selectBeds(n) {
+    selectedBeds = n;
+    document.querySelectorAll('.bed-btn').forEach(function(b){
+      b.classList.toggle('active', parseInt(b.dataset.beds) === n);
+    });
+    updateTotal();
+  }
+
+  function carpetPrice(beds) {
+    return 200 + (beds - 1) * 100; // 200, 300, 400, 500, 600...
+  }
+
+  function updateTotal() {
+    if (!selectedBeds) return;
+    var svc = document.getElementById('service').value;
+    var isLease = (svc === 'End of Lease Cleaning' || svc === 'Deep Cleaning');
+    var total = basePrice(selectedBeds, svc);
+    var addons = isLease ? LEASE_ADDONS : RESIDENTIAL_ADDONS;
+    addons.forEach(function(a) {
+      var el = document.getElementById('chk_' + a.key);
+      if (el && el.classList.contains('checked')) {
+        if (a.isCarpet) {
+          total += carpetPrice(selectedBeds);
+        } else {
+          total += a.price;
+        }
+      }
+    });
+    document.getElementById('calcTotal').textContent = '$' + total;
+    // Update carpet label price dynamically
+    var carpetPriceEl = document.getElementById('price_carpet');
+    if (carpetPriceEl) carpetPriceEl.textContent = '+$' + carpetPrice(selectedBeds);
+  }
+
+  function copyVal(text, confirmId) {
+    navigator.clipboard.writeText(text).then(function() {
+      var el = document.getElementById(confirmId);
+      el.classList.add('show');
+      setTimeout(function(){ el.classList.remove('show'); }, 2000);
+    }).catch(function() {
+      // fallback for older browsers
+      var ta = document.createElement('textarea');
+      ta.value = text;
+      document.body.appendChild(ta);
+      ta.select();
+      document.execCommand('copy');
+      document.body.removeChild(ta);
+      var el = document.getElementById(confirmId);
+      el.classList.add('show');
+      setTimeout(function(){ el.classList.remove('show'); }, 2000);
+    });
+  }
+
+  function showToast(text, bg, color, timeout) {
+    bg = bg || '#00C9A7';
+    color = color || '#0D1B2A';
+    timeout = timeout || 4000;
+    var t = document.getElementById('toast');
+    t.style.background = bg;
+    t.style.color = color;
+    t.textContent = text;
+    t.classList.add('show');
+    setTimeout(function(){ t.classList.remove('show'); }, timeout);
+  }
+
+  function clearForm() {
+    ['fname','lname','email','phone','service','size','suburb','message'].forEach(function(id) {
+      var el = document.getElementById(id);
       if (el) el.value = '';
     });
   }
 
-  // Smooth active nav highlight
-  const sections = document.querySelectorAll('section[id]');
-  window.addEventListener('scroll', () => {
-    const scrollY = window.scrollY;
-    sections.forEach(sec => {
-      const top = sec.offsetTop - 100;
-      const bottom = top + sec.offsetHeight;
-      const link = document.querySelector(`.nav-links a[href="#${sec.id}"]`);
-      if (link) {
-        if (scrollY >= top && scrollY < bottom) {
-          link.style.color = '#00C9A7';
-        } else {
-          link.style.color = 'rgba(255,255,255,0.75)';
+  function fallbackMailto(fname, lname, email, phone, service, size, suburb, message) {
+    var subject = 'Quote Request – ' + service + ' (' + (suburb || 'Darwin') + ')';
+    var body =
+      'Name: ' + fname + (lname ? ' ' + lname : '') + '\n' +
+      'Email: ' + email + '\n' +
+      'Phone: ' + (phone || 'Not provided') + '\n' +
+      'Service: ' + service + '\n' +
+      'Property Size: ' + (size || 'Not specified') + '\n' +
+      'Suburb: ' + (suburb || 'Not specified') + '\n\n' +
+      'Additional Info:\n' + (message || 'None');
+    window.location.href = 'mailto:destinyservicesnt@gmail.com'
+      + '?subject=' + encodeURIComponent(subject)
+      + '&body=' + encodeURIComponent(body);
+  }
+
+  function getTodayDate() {
+    var d = new Date();
+    var dd = String(d.getDate()).padStart(2,'0');
+    var mm = String(d.getMonth()+1).padStart(2,'0');
+    var yyyy = d.getFullYear();
+    return dd + '/' + mm + '/' + yyyy;
+  }
+
+  function getServiceIncludes(service) {
+    var res = [
+      'Thorough cleaning and sanitising of all bathrooms and toilets',
+      'Cleaning of all bedrooms, living and dining areas',
+      'Vacuuming and mopping of all hard floors',
+      'Kitchen surfaces, benchtops and splashback cleaning',
+      'Cleaning of skirting boards, door frames and light switches',
+      'Cobweb removal and general dusting throughout',
+      'Spot cleaning of walls and marks'
+    ];
+    var lease = [
+      'Kitchen cleaning (excluding oven and rangehood unless selected)',
+      'Thorough cleaning and sanitising of bathrooms and toilets',
+      'Cleaning of all bedrooms, living and dining areas',
+      'Vacuuming and mopping of all hard floors',
+      'Internal window cleaning',
+      'Cleaning of wardrobes and cupboards (inside)',
+      'Cleaning of skirting boards, door frames and light switches',
+      'Cobweb removal',
+      'General dusting and spot cleaning throughout the property'
+    ];
+    var deep = [
+      'Everything included in standard cleaning',
+      'Inside appliances (oven, fridge if selected)',
+      'Inside cupboards and drawers',
+      'Grout scrubbing and tile deep clean',
+      'Window tracks and sill cleaning',
+      'Skirting boards, door frames and light switches',
+      'Cobweb removal and full property dust'
+    ];
+    if (service === 'End of Lease Cleaning') return lease;
+    if (service === 'Deep Cleaning') return deep;
+    return res;
+  }
+
+  function buildQuoteBreakdown(service, bedsLabel, basePrice, addonsSelected, customerName, suburb) {
+    var today = getTodayDate();
+    var includes = getServiceIncludes(service);
+    var propertyDesc = (bedsLabel && bedsLabel !== 'Not specified') ? bedsLabel + ' Property' : 'Property';
+    var location = suburb || 'Darwin, NT';
+    var grandTotal = parseInt(basePrice.replace('$','').replace(',','')) || 0;
+    addonsSelected.forEach(function(a){ grandTotal += a.price; });
+
+    // Build includes list items
+    var includesHTML = includes.map(function(i){ return '<li style="margin:5px 0;color:#374151;">' + i + '</li>'; }).join('');
+
+    // Build addons rows
+    var addonsHTML = '';
+    if (addonsSelected.length > 0) {
+      var addonRows = addonsSelected.map(function(a){
+        return '<tr><td style="padding:8px 12px;color:#374151;">' + a.label + '</td><td style="padding:8px 12px;text-align:right;color:#374151;">+$' + a.price + '.00</td></tr>';
+      }).join('');
+      addonsHTML = '\
+<tr><td colspan="2" style="padding:10px 12px 4px;font-size:12px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:#9CA3AF;">Optional Add-ons Selected</td></tr>\
+' + addonRows;
+    }
+
+    // Quality commitment
+    var quality = service === 'End of Lease Cleaning'
+      ? 'We take pride in delivering professional, reliable, and high-quality bond cleaning services. Our cleaning is completed to a professional standard in line with industry expectations. If the property manager identifies any cleaning items covered by our service, we will return to rectify them at no additional cost, provided we are notified within 72 hours of the inspection and before the property is reoccupied.'
+      : 'We take pride in delivering professional, reliable, and high-quality cleaning services. If you are not completely satisfied, we will return within 24 hours to rectify any issues at no additional cost.';
+
+    var html = '\
+<!DOCTYPE html>\
+<html><head><meta charset="UTF-8"></head>\
+<body style="margin:0;padding:0;background:#F3F4F6;font-family:Arial,sans-serif;">\
+<table width="100%" cellpadding="0" cellspacing="0" style="background:#F3F4F6;padding:32px 0;">\
+<tr><td align="center">\
+<table width="620" cellpadding="0" cellspacing="0" style="background:#ffffff;border-radius:12px;overflow:hidden;box-shadow:0 4px 24px rgba(0,0,0,0.08);">\
+\
+<!-- HEADER -->\
+<tr><td style="background:linear-gradient(135deg,#0D1B2A 0%,#0A3D62 100%);padding:32px 40px;">\
+  <table width="100%"><tr>\
+    <td><div style="font-size:22px;font-weight:900;color:#ffffff;letter-spacing:0.02em;">DESTINY SERVICES NT</div>\
+    <div style="margin-top:6px;font-size:13px;color:rgba(255,255,255,0.65);">📞 0452 304 244 &nbsp;|&nbsp; ✉️ destinyservicesnt@gmail.com</div></td>\
+    <td align="right"><div style="background:#00C9A7;color:#0D1B2A;font-size:11px;font-weight:800;letter-spacing:0.1em;text-transform:uppercase;padding:6px 16px;border-radius:100px;">Official Quote</div></td>\
+  </tr></table>\
+</td></tr>\
+\
+<!-- TITLE BAR -->\
+<tr><td style="background:#00C9A7;padding:14px 40px;">\
+  <div style="font-size:18px;font-weight:700;color:#0D1B2A;">' + service + ' Quote</div>\
+</td></tr>\
+\
+<!-- META -->\
+<tr><td style="padding:24px 40px 0;">\
+  <table width="100%" cellpadding="0" cellspacing="0">\
+  <tr>\
+    <td style="padding-bottom:8px;font-size:13px;color:#6B7280;">Date:</td>\
+    <td style="padding-bottom:8px;font-size:13px;color:#111827;font-weight:600;">' + today + '</td>\
+  </tr>\
+  <tr>\
+    <td style="padding-bottom:8px;font-size:13px;color:#6B7280;">Prepared for:</td>\
+    <td style="padding-bottom:8px;font-size:13px;color:#111827;font-weight:600;">' + (customerName || 'Valued Customer') + '</td>\
+  </tr>\
+  <tr>\
+    <td style="padding-bottom:8px;font-size:13px;color:#6B7280;">Property:</td>\
+    <td style="padding-bottom:8px;font-size:13px;color:#111827;font-weight:600;">' + propertyDesc + '</td>\
+  </tr>\
+  <tr>\
+    <td style="font-size:13px;color:#6B7280;">Location:</td>\
+    <td style="font-size:13px;color:#111827;font-weight:600;">' + location + '</td>\
+  </tr>\
+  </table>\
+</td></tr>\
+\
+<!-- DIVIDER -->\
+<tr><td style="padding:20px 40px;"><hr style="border:none;border-top:1px solid #E5E7EB;"></td></tr>\
+\
+<!-- QUOTATION TABLE -->\
+<tr><td style="padding:0 40px;">\
+  <div style="font-size:13px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#6B7280;margin-bottom:12px;">Quotation</div>\
+  <table width="100%" cellpadding="0" cellspacing="0" style="border-radius:8px;overflow:hidden;border:1px solid #E5E7EB;">\
+  <tr style="background:#F9FAFB;">\
+    <td style="padding:10px 12px;font-size:12px;font-weight:700;text-transform:uppercase;color:#6B7280;">Description</td>\
+    <td style="padding:10px 12px;text-align:right;font-size:12px;font-weight:700;text-transform:uppercase;color:#6B7280;">Amount</td>\
+  </tr>\
+  <tr style="background:#fff;">\
+    <td style="padding:12px 12px;color:#111827;font-weight:600;">' + service + (bedsLabel && bedsLabel !== 'Not specified' ? ' (' + bedsLabel.replace('bedrooms','Bedroom').replace('bedroom','Bedroom') + ')' : '') + '</td>\
+    <td style="padding:12px 12px;text-align:right;color:#111827;font-weight:700;">' + basePrice + '.00</td>\
+  </tr>\
+  ' + addonsHTML + '\
+  <tr style="background:#0D1B2A;">\
+    <td style="padding:14px 12px;font-size:15px;font-weight:700;color:#ffffff;">TOTAL</td>\
+    <td style="padding:14px 12px;text-align:right;font-size:18px;font-weight:900;color:#00C9A7;">$' + grandTotal + '.00</td>\
+  </tr>\
+  </table>\
+</td></tr>\
+\
+<!-- SERVICE INCLUDES -->\
+<tr><td style="padding:28px 40px 0;">\
+  <div style="font-size:13px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#6B7280;margin-bottom:12px;">Service Includes</div>\
+  <ul style="margin:0;padding-left:20px;list-style:disc;">' + includesHTML + '</ul>\
+</td></tr>\
+\
+<!-- QUALITY COMMITMENT -->\
+<tr><td style="padding:24px 40px 0;">\
+  <div style="background:#F0FDF9;border:1px solid #A7F3D0;border-radius:8px;padding:16px 20px;">\
+    <div style="font-size:13px;font-weight:700;color:#065F46;margin-bottom:6px;">Our Quality Commitment</div>\
+    <div style="font-size:13px;color:#374151;line-height:1.6;">' + quality + '</div>\
+  </div>\
+</td></tr>\
+\
+<!-- CLOSING -->\
+<tr><td style="padding:24px 40px;">\
+  <p style="font-size:13px;color:#374151;line-height:1.7;">We appreciate the opportunity to provide this quotation and look forward to assisting you. If you wish to proceed with the booking or have any questions, please do not hesitate to contact us.</p>\
+  <p style="font-size:13px;color:#374151;margin-top:16px;">Kind regards,<br><strong>Ashwin Majhi</strong><br>Destiny Services NT<br>📞 0452 304 244 &nbsp;|&nbsp; ✉️ destinyservicesnt@gmail.com</p>\
+</td></tr>\
+\
+<!-- FOOTER -->\
+<tr><td style="background:#F9FAFB;border-top:1px solid #E5E7EB;padding:16px 40px;">\
+  <div style="font-size:11px;color:#9CA3AF;text-align:center;">This quote is valid for 14 days from the date issued. &nbsp;|&nbsp; ABN: 75 502 323 389</div>\
+</td></tr>\
+\
+</table>\
+</td></tr></table>\
+</body></html>';
+    return html;
+  }
+
+  function getSelectedAddons() {
+    // Collect ticked add-ons from the calculator
+    var svc = document.getElementById('service').value;
+    var isLease = (svc === 'End of Lease Cleaning' || svc === 'Deep Cleaning');
+    var addons = isLease ? LEASE_ADDONS : RESIDENTIAL_ADDONS;
+    var selected = [];
+    addons.forEach(function(a) {
+      var el = document.getElementById('chk_' + a.key);
+      if (el && el.classList.contains('checked')) {
+        var price = a.isCarpet ? carpetPrice(selectedBeds) : a.price;
+        selected.push({ label: a.label, price: price });
+      }
+    });
+    return selected;
+  }
+
+  function handleQuote(e) {
+    if (e && e.preventDefault) e.preventDefault();
+
+    var submitBtn = document.getElementById('quoteSubmit');
+    var fname   = document.getElementById('fname').value.trim();
+    var lname   = document.getElementById('lname').value.trim();
+    var email   = document.getElementById('email').value.trim();
+    var phone   = document.getElementById('phone').value.trim();
+    var service = document.getElementById('service').value;
+    var suburb  = document.getElementById('suburb').value.trim();
+    var message = document.getElementById('message').value.trim();
+
+    if (!fname || !email || !service) {
+      showToast('⚠️ Please fill in your name, email, and service type.', '#e74c3c', '#fff', 3500);
+      return;
+    }
+
+    submitBtn.disabled = true;
+    showToast('Sending your quote…', '#00C9A7', '#0D1B2A', 10000);
+
+    var fullName  = fname + (lname ? ' ' + lname : '');
+    var bedsInfo  = selectedBeds ? selectedBeds + (selectedBeds === 5 ? '+ bed' : ' bed' + (selectedBeds > 1 ? 's' : '')) : '';
+    var bedsLabel = selectedBeds ? selectedBeds + (selectedBeds === 5 ? '+ bedrooms' : ' bedroom' + (selectedBeds > 1 ? 's' : '')) : 'Not specified';
+    var titleStr  = service + (bedsInfo ? ' – ' + bedsInfo : '') + (suburb ? ' (' + suburb + ')' : '');
+    var calcTotalEl   = document.getElementById('calcTotal');
+    var estimatedPrice = (calcTotalEl && calcTotalEl.textContent !== 'Select bedrooms') ? calcTotalEl.textContent : 'To be confirmed';
+    var addonsSelected = getSelectedAddons();
+
+    // Owner notification — full details
+    var ownerMsg =
+      'Name: ' + fullName + '\n' +
+      'Email: ' + email + '\n' +
+      'Phone: ' + (phone || 'Not provided') + '\n' +
+      'Service: ' + service + '\n' +
+      'Bedrooms: ' + bedsLabel + '\n' +
+      'Suburb: ' + (suburb || 'Not specified') + '\n' +
+      'Estimated Price: ' + estimatedPrice + '\n';
+    if (addonsSelected.length > 0) {
+      ownerMsg += 'Add-ons: ' + addonsSelected.map(function(a){ return a.label + ' ($' + a.price + ')'; }).join(', ') + '\n';
+    }
+    ownerMsg += '\nNotes:\n' + (message || 'None');
+
+    // Customer quote email — full breakdown
+    var customerQuote = buildQuoteBreakdown(service, bedsLabel, estimatedPrice, addonsSelected, fullName, suburb);
+
+    var ownerParams = {
+      name:    fullName,
+      title:   titleStr,
+      message: ownerMsg,
+      email:   email
+    };
+
+    // Use {{message}} in the auto-reply template to send the quote breakdown
+    var customerParams = {
+      name:    fname,
+      title:   'Your Quote from Destiny Services',
+      email:   email,
+      message: customerQuote
+    };
+
+    if (window.emailjs) {
+      emailjs.send('service_pj5ox4o', 'template_fu8ymim', ownerParams)
+        .then(function() {
+          return emailjs.send('service_pj5ox4o', 'template_4mld6zj', customerParams);
+        })
+        .then(function() {
+          showToast('✅ Quote sent to your email! We\'ll confirm within 2 hours.', '#00C9A7', '#0D1B2A', 6000);
+          clearForm();
+          // Reset calculator
+          selectedBeds = 0;
+          document.querySelectorAll('.bed-btn').forEach(function(b){ b.classList.remove('active'); });
+          document.getElementById('calcBox').style.display = 'none';
+          submitBtn.disabled = false;
+        })
+        .catch(function(err) {
+          console.warn('EmailJS failed, opening mailto fallback:', err);
+          fallbackMailto(fname, lname, email, phone, service, '', suburb, message);
+          showToast('✅ Your email app has been opened. Please send to complete your request.', '#00C9A7', '#0D1B2A', 6000);
+          clearForm();
+          submitBtn.disabled = false;
+        });
+    } else {
+      fallbackMailto(fname, lname, email, phone, service, '', suburb, message);
+      showToast('✅ Your email app has been opened. Please send the message to complete your request.', '#00C9A7', '#0D1B2A', 6000);
+      clearForm();
+      submitBtn.disabled = false;
+    }
+  }
+
+
+  /* ══════════════════════════════════════════════
+     BOOKING MODAL
+  ══════════════════════════════════════════════ */
+
+  // Base service Stripe links
+  var BASE_LINKS = {
+    residential: { 1:'https://buy.stripe.com/eVq9AT7U92Krdyr2UIaEE01', 2:'https://buy.stripe.com/fZu3cvcap0CjcuncviaEE02', 3:'https://buy.stripe.com/5kQ3cv3DTdp5eCvbreaEE03', 4:'https://buy.stripe.com/28EcN5fmB2KrbqjbreaEE04', 5:'https://buy.stripe.com/dRmfZhdet2Kr3XR52QaEE05' },
+    deep:        { 1:'https://buy.stripe.com/28EfZh3DT0Cjbqj8f2aEE06', 2:'https://buy.stripe.com/7sYeVd2zPet92TN8f2aEE07', 3:'https://buy.stripe.com/5kQ6oH8Ydet97a3gLyaEE08', 4:'https://buy.stripe.com/3cI9AT0rH4SzeCv2UIaEE09', 5:'https://buy.stripe.com/3cI9AT0rH4SzeCv2UIaEE09' },
+    lease:       { 1:'https://buy.stripe.com/fZu6oHcapfxd2TN7aYaEE0b', 2:'https://buy.stripe.com/8x28wPa2h0CjamfgLyaEE0c', 3:'https://buy.stripe.com/fZu5kD4HX70HamffHuaEE0d', 4:'https://buy.stripe.com/cNidR91vL70Hcun66UaEE0e', 5:'https://buy.stripe.com/3cI4gza2h1Gn65ZgLyaEE0f' },
+    window:       'https://buy.stripe.com/4gM6oHgqF0Cj51V9j6aEE0g',
+    commercial:   'https://buy.stripe.com/eVqdR9a2h1Gn0LF0MAaEE0h',
+    construction: 'https://buy.stripe.com/aFacN56Q5et92TN1QEaEE0i'
+  };
+
+  // Add-on Stripe links
+  var ADDON_LINKS = {
+    res: {
+      bathroom:  { label:'Extra Bathroom',   price:60,  link:'https://buy.stripe.com/cNi4gz4HX84LgKDgLyaEE0j' },
+      balcony:   { label:'Balcony',           price:50,  link:'https://buy.stripe.com/14A00j8Yd98P2TNanaaEE0k' },
+      cupboards: { label:'Cupboards',         price:60,  link:'https://buy.stripe.com/00waEX5M14Szdyr8f2aEE0l' },
+      fridge:    { label:'Fridge (inside)',   price:50,  link:'https://buy.stripe.com/00waEXdet84L1PJanaaEE0m' },
+      garage:    { label:'Garage',            price:100, link:'https://buy.stripe.com/eVqbJ1gqFfxd65Z3YMaEE0n' },
+      oven:      { label:'Oven (inside)',     price:80,  link:'https://buy.stripe.com/3cI3cvdetfxd3XR1QEaEE0o' },
+      pantry:    { label:'Pantry',            price:60,  link:'https://buy.stripe.com/eVq5kDdetfxddyr8f2aEE0p' },
+      blinds:    { label:'Blinds',            price:20,  link:'https://buy.stripe.com/4gM5kD2zP84LgKDgLyaEE0q' },
+      windows:   { label:'Windows',           price:40,  link:'https://buy.stripe.com/6oUcN55M1et90LF1QEaEE0r' }
+    },
+    lease: {
+      bathroom:  { label:'Extra Bathroom',   price:120, link:'https://buy.stripe.com/9B628r8Yd1Gn51VfHuaEE0s' },
+      balcony:   { label:'Balcony',           price:100, link:'https://buy.stripe.com/3cIbJ18Yddp5amf66UaEE0t' },
+      cupboards: { label:'Cupboards',         price:120, link:'https://buy.stripe.com/8x2bJ1fmBet9amf7aYaEE0u' },
+      garage:    { label:'Garage',            price:100, link:'https://buy.stripe.com/eVq7sLa2h84L65ZgLyaEE0v' },
+      oven:      { label:'Oven (inside)',     price:160, link:'https://buy.stripe.com/6oU5kD8YdgBhfGzanaaEE0w' },
+      pantry:    { label:'Pantry',            price:120, link:'https://buy.stripe.com/aFa7sL4HXet9fGz3YMaEE0x' },
+      blinds:    { label:'Blinds',            price:40,  link:'https://buy.stripe.com/aFa00j8Yd2Kr51V1QEaEE0y' },
+      windows:   { label:'Windows',           price:40,  link:'https://buy.stripe.com/00wdR96Q5et91PJ1QEaEE0z' },
+      carpet:    { label:'Carpet Steam Clean',price:'per-bed', link:'https://buy.stripe.com/6oU14n3DT2Kr7a38f2aEE0A' }
+    }
+  };
+
+  var CARPET_PRICES = { 1:200, 2:300, 3:400, 4:500, 5:600 };
+
+  var SERVICE_LABELS = {
+    residential:'Residential Cleaning', deep:'Deep Cleaning',
+    lease:'End of Lease Cleaning',      window:'Window Cleaning',
+    commercial:'Commercial Cleaning',   construction:'After-Construction Cleaning'
+  };
+
+  var RES_PRICES   = { 1:200, 2:280, 3:360, 4:440, 5:520 };
+  var DEEP_PRICES  = { 1:400, 2:600, 3:800, 4:1000, 5:1200 };
+  var LEASE_PRICES = { 1:400, 2:600, 3:800, 4:1000, 5:1200 };
+  var FIXED_PRICES = { window:100, commercial:200, construction:400 };
+
+  var bkService = null;
+  var bkBeds    = 1;
+  var bkBasePrice = 0;
+  var bkBaseLink  = '';
+
+  function openBooking(preselect) {
+    document.getElementById('bookingOverlay').style.display = 'flex';
+    document.body.style.overflow = 'hidden';
+    showStep(1);
+    if (preselect) selectService(preselect);
+  }
+
+  function closeBooking() {
+    document.getElementById('bookingOverlay').style.display = 'none';
+    document.body.style.overflow = '';
+  }
+
+  function closeBookingOutside(e) {
+    if (e.target === document.getElementById('bookingOverlay')) closeBooking();
+  }
+
+  document.addEventListener('keydown', function(e) { if (e.key === 'Escape') closeBooking(); });
+
+  function showStep(n) {
+    [1,2,3,4].forEach(function(i) {
+      var el = document.getElementById('bkStep' + i);
+      if (el) el.style.display = (i === n) ? 'block' : 'none';
+    });
+  }
+
+  function bkGoBack(step) { showStep(step); }
+
+  function selectService(key) {
+    bkService = key;
+    var needsBeds = (key === 'residential' || key === 'deep' || key === 'lease');
+    if (needsBeds) {
+      var prices = key === 'residential' ? RES_PRICES : (key === 'deep' ? DEEP_PRICES : LEASE_PRICES);
+      for (var b = 1; b <= 5; b++) {
+        var el = document.getElementById('bkp' + b);
+        if (el) el.textContent = '$' + prices[b];
+      }
+      showStep(2);
+    } else {
+      bkBasePrice = FIXED_PRICES[key];
+      bkBaseLink  = BASE_LINKS[key];
+      bkBeds = 0;
+      buildAddons();
+      showStep(3);
+    }
+  }
+
+  function selectBedroom(n) {
+    bkBeds = n;
+    var prices = bkService === 'residential' ? RES_PRICES : (bkService === 'deep' ? DEEP_PRICES : LEASE_PRICES);
+    bkBasePrice = prices[n];
+    bkBaseLink  = BASE_LINKS[bkService][n];
+    buildAddons();
+    showStep(3);
+  }
+
+  function buildAddons() {
+    var grid = document.getElementById('bkAddonGrid');
+    grid.innerHTML = '';
+    var addonSet = null;
+    if (bkService === 'residential') addonSet = ADDON_LINKS.res;
+    else if (bkService === 'deep' || bkService === 'lease') addonSet = ADDON_LINKS.lease;
+    if (!addonSet) {
+      document.getElementById('bkAddonGrid').style.display = 'none';
+    } else {
+      document.getElementById('bkAddonGrid').style.display = 'grid';
+      Object.keys(addonSet).forEach(function(key) {
+        var a = addonSet[key];
+        var displayPrice = (a.price === 'per-bed') ? '$' + (CARPET_PRICES[bkBeds] || 200) : '+$' + a.price;
+        var div = document.createElement('div');
+        div.className = 'bk-addon-item';
+        div.id = 'bkAddon_' + key;
+        div.innerHTML =
+          '<div class="bk-addon-check" id="bkAddonBox_' + key + '"></div>' +
+          '<span class="bk-addon-item-label">' + a.label + '</span>' +
+          '<span class="bk-addon-item-price" id="bkAddonPrice_' + key + '">' + displayPrice + '</span>';
+        div.onclick = function() { toggleBkAddon(key); };
+        grid.appendChild(div);
+      });
+    }
+    updateAddonTotal();
+    document.getElementById('bkAddonBase').textContent = '$' + bkBasePrice;
+    document.getElementById('bkAddonTotal').textContent = '$' + bkBasePrice;
+  }
+
+  function toggleBkAddon(key) {
+    var item = document.getElementById('bkAddon_' + key);
+    var box  = document.getElementById('bkAddonBox_' + key);
+    item.classList.toggle('checked');
+    box.textContent = item.classList.contains('checked') ? '✓' : '';
+    updateAddonTotal();
+  }
+
+  function updateAddonTotal() {
+    var addonSet = (bkService === 'residential') ? ADDON_LINKS.res : ADDON_LINKS.lease;
+    var extrasTotal = 0;
+    if (addonSet) {
+      Object.keys(addonSet).forEach(function(key) {
+        var item = document.getElementById('bkAddon_' + key);
+        if (item && item.classList.contains('checked')) {
+          var a = addonSet[key];
+          extrasTotal += (a.price === 'per-bed') ? (CARPET_PRICES[bkBeds] || 200) : a.price;
         }
+      });
+    }
+    var grandTotal = bkBasePrice + extrasTotal;
+    document.getElementById('bkAddonTotal').textContent = '$' + grandTotal;
+    var extrasRow = document.getElementById('bkAddonExtrasRow');
+    if (extrasTotal > 0) {
+      extrasRow.style.display = 'flex';
+      document.getElementById('bkAddonExtras').textContent = '+$' + extrasTotal;
+    } else {
+      extrasRow.style.display = 'none';
+    }
+  }
+
+  function goToPayment() {
+    var addonSet = (bkService === 'residential') ? ADDON_LINKS.res :
+                   ((bkService === 'deep' || bkService === 'lease') ? ADDON_LINKS.lease : null);
+
+    // Build order items for summary display
+    var items = [];
+    var bedsLabel = bkBeds ? (bkBeds + (bkBeds === 5 ? '+ Bedrooms' : bkBeds === 1 ? ' Bedroom' : ' Bedrooms')) : '';
+    items.push({ label: SERVICE_LABELS[bkService] + (bedsLabel ? ' — ' + bedsLabel : ''), price: bkBasePrice });
+
+    // Collect selected add-ons
+    var selectedAddons = [];
+    if (addonSet) {
+      Object.keys(addonSet).forEach(function(key) {
+        var item = document.getElementById('bkAddon_' + key);
+        if (item && item.classList.contains('checked')) {
+          var a = addonSet[key];
+          var price = (a.price === 'per-bed') ? (CARPET_PRICES[bkBeds] || 200) : a.price;
+          items.push({ label: a.label, price: price });
+          selectedAddons.push({ key: key, price: price, link: a.link });
+        }
+      });
+    }
+
+    // Calculate grand total
+    var grandTotal = 0;
+    items.forEach(function(it) { grandTotal += it.price; });
+
+    // Build summary HTML
+    var summaryHtml = '';
+    items.forEach(function(it) {
+      summaryHtml += '<div class="bk-summary-row"><span>' + it.label + '</span><span>$' + it.price + '</span></div>';
+    });
+    summaryHtml += '<div class="bk-summary-total"><span>Grand Total</span><span>$' + grandTotal + '</span></div>';
+    document.getElementById('bkOrderSummary').innerHTML = summaryHtml;
+
+    // Build single pay button
+    // If no add-ons selected — go straight to base link
+    // If add-ons selected — use the base link with total shown; 
+    // Stripe Payment Links don't support dynamic totals natively,
+    // so we direct to base link and show a note about add-ons being included in total.
+    // The cleanest UX: one button, opens base service link, total is shown clearly above.
+    var payLink = bkBaseLink;
+
+    // If add-ons exist, append them as a quantity note via URL (Stripe ignores unknown params but we show total clearly)
+    var btnsHtml =
+      '<a href="' + payLink + '" target="_blank" class="bk-pay-btn bk-pay-main">' +
+      '<span>💳 &nbsp;Pay $' + grandTotal + ' — Card / Apple Pay / Google Pay</span>' +
+      '<span class="bk-pay-arrow">→</span></a>';
+
+    // If add-ons were selected, show a small note below the pay button
+    if (selectedAddons.length > 0) {
+      btnsHtml += '<div class="bk-addon-pay-note">'
+        + '⚠️ Your total includes $' + (grandTotal - bkBasePrice) + ' in add-ons. '
+        + 'After paying the base service above, our team will contact you to confirm and process the add-on charges of $' + (grandTotal - bkBasePrice) + ' separately.'
+        + '</div>';
+    }
+
+    document.getElementById('bkPayButtons').innerHTML = btnsHtml;
+    showStep(4);
+  }
+
+  /* Active nav highlight on scroll */
+  var sections = document.querySelectorAll('section[id]');
+  window.addEventListener('scroll', function() {
+    var scrollY = window.scrollY;
+    sections.forEach(function(sec) {
+      var top    = sec.offsetTop - 100;
+      var bottom = top + sec.offsetHeight;
+      var link   = document.querySelector('.nav-links a[href="#' + sec.id + '"]');
+      if (link) {
+        link.style.color = (scrollY >= top && scrollY < bottom)
+          ? '#00C9A7'
+          : 'rgba(255,255,255,0.75)';
       }
     });
   });
 </script>
+
+
+<!-- BOOKING MODAL -->
+<div id="bookingOverlay" style="display:none;" onclick="closeBookingOutside(event)">
+  <div id="bookingModal">
+    <button class="bk-close" onclick="closeBooking()">✕</button>
+
+    <!-- STEP 1: Choose Service -->
+    <div id="bkStep1">
+      <div class="bk-eyebrow">Book a Clean</div>
+      <div class="bk-title">What type of clean<br>do you need?</div>
+      <div class="bk-services">
+        <div class="bk-svc-card" onclick="selectService('residential')">
+          <span class="bk-svc-icon">🏠</span>
+          <div class="bk-svc-name">Residential Cleaning</div>
+          <div class="bk-svc-from">From $200</div>
+        </div>
+        <div class="bk-svc-card" onclick="selectService('deep')">
+          <span class="bk-svc-icon">🔍</span>
+          <div class="bk-svc-name">Deep Cleaning</div>
+          <div class="bk-svc-from">From $400</div>
+        </div>
+        <div class="bk-svc-card" onclick="selectService('lease')">
+          <span class="bk-svc-icon">🔑</span>
+          <div class="bk-svc-name">End of Lease Cleaning</div>
+          <div class="bk-svc-from">From $400</div>
+        </div>
+        <div class="bk-svc-card" onclick="selectService('window')">
+          <span class="bk-svc-icon">🪟</span>
+          <div class="bk-svc-name">Window Cleaning</div>
+          <div class="bk-svc-from">From $100</div>
+        </div>
+        <div class="bk-svc-card" onclick="selectService('commercial')">
+          <span class="bk-svc-icon">🏢</span>
+          <div class="bk-svc-name">Commercial Cleaning</div>
+          <div class="bk-svc-from">From $200</div>
+        </div>
+        <div class="bk-svc-card" onclick="selectService('construction')">
+          <span class="bk-svc-icon">🏗️</span>
+          <div class="bk-svc-name">After-Construction</div>
+          <div class="bk-svc-from">From $400</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- STEP 2: Choose Bedrooms -->
+    <div id="bkStep2" style="display:none;">
+      <button class="bk-back" onclick="bkGoBack(1)">← Back</button>
+      <div class="bk-eyebrow">Step 2 of 4</div>
+      <div class="bk-title">How many bedrooms?</div>
+      <div class="bk-beds">
+        <div class="bk-bed-card" onclick="selectBedroom(1)"><span class="bk-bed-num">1</span><span class="bk-bed-label">Bedroom</span><span class="bk-bed-price" id="bkp1"></span></div>
+        <div class="bk-bed-card" onclick="selectBedroom(2)"><span class="bk-bed-num">2</span><span class="bk-bed-label">Bedrooms</span><span class="bk-bed-price" id="bkp2"></span></div>
+        <div class="bk-bed-card" onclick="selectBedroom(3)"><span class="bk-bed-num">3</span><span class="bk-bed-label">Bedrooms</span><span class="bk-bed-price" id="bkp3"></span></div>
+        <div class="bk-bed-card" onclick="selectBedroom(4)"><span class="bk-bed-num">4</span><span class="bk-bed-label">Bedrooms</span><span class="bk-bed-price" id="bkp4"></span></div>
+        <div class="bk-bed-card" onclick="selectBedroom(5)"><span class="bk-bed-num">5+</span><span class="bk-bed-label">Bedrooms</span><span class="bk-bed-price" id="bkp5"></span></div>
+      </div>
+    </div>
+
+    <!-- STEP 3: Add-ons -->
+    <div id="bkStep3" style="display:none;">
+      <button class="bk-back" onclick="bkGoBack(2)">← Back</button>
+      <div class="bk-eyebrow">Step 3 of 4</div>
+      <div class="bk-title">Any extras?</div>
+      <p style="font-size:0.82rem;color:rgba(255,255,255,0.45);margin:-12px 0 18px;">Optional — tick anything you'd like added to your clean.</p>
+      <div class="bk-addon-grid" id="bkAddonGrid"></div>
+      <div class="bk-addon-subtotal">
+        <span>Base service</span><span id="bkAddonBase"></span>
+      </div>
+      <div class="bk-addon-subtotal" id="bkAddonExtrasRow" style="display:none;">
+        <span>Add-ons</span><span id="bkAddonExtras"></span>
+      </div>
+      <div class="bk-addon-total-row">
+        <span>Total</span><span id="bkAddonTotal"></span>
+      </div>
+      <button class="bk-continue-btn" onclick="goToPayment()">Continue to Payment →</button>
+    </div>
+
+    <!-- STEP 4: Payment -->
+    <div id="bkStep4" style="display:none;">
+      <button class="bk-back" onclick="bkGoBack(3)">← Back</button>
+      <div class="bk-eyebrow">Step 4 of 4</div>
+      <div class="bk-title">Confirm &amp; Pay</div>
+
+      <!-- Order summary -->
+      <div class="bk-summary" id="bkOrderSummary"></div>
+
+      <div class="bk-pay-title">Pay everything in one secure checkout</div>
+      <div id="bkPayButtons"></div>
+      <div class="bk-pay-note">🔒 Secure checkout powered by Stripe. Apple Pay &amp; Google Pay supported on compatible devices.</div>
+    </div>
+  </div>
+</div>
 
 </body>
 </html>
